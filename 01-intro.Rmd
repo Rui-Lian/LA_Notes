@@ -1,0 +1,11 @@
+# Introduction {#intro}
+
+Statistics, Data science, machine learning need a better understand of linear algebra.
+
+Two aspects of linear algebra are: 
+
+1. Geometric understanding; 
+
+2. Numerical computation. 
+
+It is the intuitive understanding, visualization (in 2D, or 3D) that matters most. 

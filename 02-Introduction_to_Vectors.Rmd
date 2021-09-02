@@ -1,0 +1,64 @@
+# Introduction to vectors
+
+## Three perspectives of vector. 
+
+In physics, vector is a number with directions, e.g., velocity. 
+
+In computer science, vector is a list of numbers, here the order in the number list suggest different directions. The follow two vectors are different: 
+
+$$
+\begin{equation}
+\left( \begin{array}{ccc}
+2 \\
+1 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+1 \\
+2 \end{array} \right)
+\end{equation}
+$$
+
+In linear algebra, vectors are anything that satisfy addition and scaling, and start from same origin--the intrinsic linearity will not be chanced by addition and scaling, if the vectors keep the same origin. 
+
+## $\mathbb{R}^n$spaces
+
+$\mathbb{R}^2$ example: 
+
+The Cartesian Coordinate is *Spanned* by two vector. 
+$$
+\begin{equation}
+\left( \begin{array}{ccc}
+1 \\
+0 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+0 \\
+1 \end{array} \right)
+\end{equation}
+$$
+
+Span: The set of all of the linear combinations of the two vector. 
+
+Same $\mathbb{R}^2$space can be spanned by:
+$$
+\begin{equation}
+\left( \begin{array}{ccc}
+2 \\
+1 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+-1 \\
+1 \end{array} \right)
+\end{equation}
+$$
+
+But the same space can't be spanned by
+$$
+\begin{equation}
+\left( \begin{array}{ccc}
+2 \\
+1 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+4 \\
+2 \end{array} \right)
+\end{equation}
+$$
+
+The above two vector live in a line. 
