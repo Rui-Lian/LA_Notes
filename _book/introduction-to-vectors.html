@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Introduction to vectors | A Minimal Book on Linear Algebra</title>
+  <meta name="description" content="This is a mini book on linear algebra. Key concept in linear algebra will be addressed with visualization, simulation such that some basic, but correct intuitions could be created." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Introduction to vectors | A Minimal Book on Linear Algebra" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a mini book on linear algebra. Key concept in linear algebra will be addressed with visualization, simulation such that some basic, but correct intuitions could be created." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Introduction to vectors | A Minimal Book on Linear Algebra" />
+  
+  <meta name="twitter:description" content="This is a mini book on linear algebra. Key concept in linear algebra will be addressed with visualization, simulation such that some basic, but correct intuitions could be created." />
+  
+
+<meta name="author" content="Lian Rui" />
+
+
+<meta name="date" content="2021-09-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="solving-linear-equations.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="introduction-to-vectors.html"><a href="introduction-to-vectors.html"><i class="fa fa-check"></i><b>3</b> Introduction to vectors</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="introduction-to-vectors.html"><a href="introduction-to-vectors.html#three-perspectives-of-vector."><i class="fa fa-check"></i><b>3.1</b> Three perspectives of vector.</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction-to-vectors.html"><a href="introduction-to-vectors.html#mathbbrnspaces"><i class="fa fa-check"></i><b>3.2</b> <span class="math inline">\(\mathbb{R}^n\)</span>spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="solving-linear-equations.html"><a href="solving-linear-equations.html"><i class="fa fa-check"></i><b>4</b> Solving Linear Equations</a></li>
+<li class="chapter" data-level="5" data-path="vector-space-and-subspaces.html"><a href="vector-space-and-subspaces.html"><i class="fa fa-check"></i><b>5</b> Vector Space and Subspaces</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="vector-space-and-subspaces.html"><a href="vector-space-and-subspaces.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="vector-space-and-subspaces.html"><a href="vector-space-and-subspaces.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="orthogonality-.html"><a href="orthogonality-.html"><i class="fa fa-check"></i><b>6</b> Orthogonality.</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="7" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>7</b> Eigenvalues and Eigenvectors</a></li>
+<li class="chapter" data-level="8" data-path="the-singular-value-decomposition-svd.html"><a href="the-singular-value-decomposition-svd.html"><i class="fa fa-check"></i><b>8</b> The Singular Value Decomposition (SVD)</a></li>
+<li class="chapter" data-level="9" data-path="linear-transformations.html"><a href="linear-transformations.html"><i class="fa fa-check"></i><b>9</b> Linear Transformations</a></li>
+<li class="chapter" data-level="10" data-path="complex-vectors-and-matrices.html"><a href="complex-vectors-and-matrices.html"><i class="fa fa-check"></i><b>10</b> Complex Vectors and Matrices</a></li>
+<li class="chapter" data-level="11" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>11</b> Applications</a></li>
+<li class="chapter" data-level="12" data-path="numerical-linear-algebra.html"><a href="numerical-linear-algebra.html"><i class="fa fa-check"></i><b>12</b> Numerical Linear Algebra</a></li>
+<li class="chapter" data-level="13" data-path="linear-algebra-in-probability-and-statistics.html"><a href="linear-algebra-in-probability-and-statistics.html"><i class="fa fa-check"></i><b>13</b> Linear Algebra in Probability and Statistics</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book on Linear Algebra</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-vectors" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Introduction to vectors</h1>
+<div id="three-perspectives-of-vector." class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Three perspectives of vector.</h2>
+<p>In physics, vector is a number with directions, e.g., velocity.</p>
+<p>In computer science, vector is a list of numbers, here the order in the number list suggest different directions. The follow two vectors are different:</p>
+<p><span class="math display">\[
+\begin{equation}
+\left( \begin{array}{ccc}
+2 \\
+1 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+1 \\
+2 \end{array} \right)
+\end{equation}
+\]</span></p>
+<p>In linear algebra, vectors are anything that satisfy addition and scaling, and start from same origin–the intrinsic linearity will not be chanced by addition and scaling, if the vectors keep the same origin.</p>
+</div>
+<div id="mathbbrnspaces" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> <span class="math inline">\(\mathbb{R}^n\)</span>spaces</h2>
+<p><span class="math inline">\(\mathbb{R}^2\)</span> example:</p>
+<p>The Cartesian Coordinate is <em>Spanned</em> by two vector.
+<span class="math display">\[
+\begin{equation}
+\left( \begin{array}{ccc}
+1 \\
+0 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+0 \\
+1 \end{array} \right)
+\end{equation}
+\]</span></p>
+<p>Span: The set of all of the linear combinations of the two vector.</p>
+<p>Same <span class="math inline">\(\mathbb{R}^2\)</span>space can be spanned by:
+<span class="math display">\[
+\begin{equation}
+\left( \begin{array}{ccc}
+2 \\
+1 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+-1 \\
+1 \end{array} \right)
+\end{equation}
+\]</span></p>
+<p>But the same space can’t be spanned by
+<span class="math display">\[
+\begin{equation}
+\left( \begin{array}{ccc}
+2 \\
+1 \end{array} \right)\qquad
+\left( \begin{array}{ccc}
+4 \\
+2 \end{array} \right)
+\end{equation}
+\]</span></p>
+<p>The above two vector live in a line.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="solving-linear-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["LA_Notes.pdf", "LA_Notes.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
