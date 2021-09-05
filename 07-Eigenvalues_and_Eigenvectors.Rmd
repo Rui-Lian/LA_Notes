@@ -1,5 +1,11 @@
 # Eigenvalues and Eigenvectors
 
+```{r include=FALSE}
+library(tidyverse)
+library(knitr)
+```
+
+
 ## Eigenvalues and Eigen vectors
 
 Matrix as a function of linear transformation. 
@@ -47,13 +53,13 @@ A = \begin{bmatrix}
 1 & 0
 \end{bmatrix};
 P = \begin{bmatrix}
-2 & 1\\
-1 & -1
+2 & -1\\
+1 & 1
 \end{bmatrix};
 P^{-1} = 
 \begin{bmatrix}
 \frac{1}{3} &  \frac{1}{3} \\
-\frac{1}{3} & -\frac{2}{3}
+-\frac{1}{3} & \frac{2}{3}
 \end{bmatrix}
 $$
 B is similar matrix of A: 
@@ -61,13 +67,103 @@ B is similar matrix of A:
 $$
 B = P^{-1}AP=
 \begin{bmatrix}
-\frac{1}{3} & \frac{2}{3} \\
--\frac{5}{3} & -\frac{1}{3}
+\frac{1}{3} & -\frac{2}{3} \\
+\frac{5}{3} & -\frac{1}{3}
 \end{bmatrix}
 $$
 
+Why $P^{-1}AP$ and $A$ are similar matrix? 
+
 Comparison of the geometric outcome of a vector transformed by A and B. 
 
-A matrix and its similar matrix expressed by eigenvectors. 
+Vector $\vec{v}$: 
 
-Meaning. 
+$$
+\vec{v} = \begin{bmatrix}
+3 \\
+2
+\end{bmatrix}
+$$
+
+$$
+A \times \vec{v} = 
+\begin{bmatrix}
+-2 \\
+3
+\end{bmatrix}
+$$
+
+$$
+B\times \vec{v}=P^{-1}AP\times\vec{v} = 
+\begin{bmatrix}
+-\frac{1}{3} \\
+4\frac{1}{3}
+\end{bmatrix}
+$$
+
+```{r echo=FALSE}
+knitr::include_graphics('img/similar matrix.png')
+```
+
+Two spaces: 
+
+1. 'Standard' Cartesian coordinates--spanned by $(1, 0), (0, 1)$; 
+
+2. New space spanned by $(2, 1); (-1, 1)$
+
+
+**$P \times v$**: Vector v in standard space. $P\times\vec{v}$ get vector d (4, 5), which is v's counterpart in new space--both vector v and vector d has same coefficients of linear combination$(3, 2)$, but lives in different space. 
+
+$AP\vec{v}$: Apply matrix A, a counter clockwise rotation of 90 degree, to v and d. v goes to v' and d goes to d2. Notice both vector rotate 90 degree counter clockwise.
+
+$P^{-1}AP\vec{v}$: $\vec{d2}$ re-expressed by the space spanned by P
+$\begin{bmatrix}
+2 & -1 \\
+1 & 1
+\end{bmatrix}$
+
+
+## Eigendecomposition of a matrix
+
+Let ${A}$ be a square $n \times n$matrix with n linearly independent eigenvectors $q_{i}$(where $i = 1, \cdots, n$). Then $A$ can be factorized as: 
+
+$$
+A = Q\Lambda Q^{-1}
+$$
+
+$Q$: the square n x n matrix whose ith column is the eigenvector $q_{i}$ of $A$; 
+
+$\Lambda$: the diagonal matrix whose diagonal elements are the corresponding eigenvalues, $\Lambda_{ii} = \lambda_{i}$
+
+Example
+
+$$
+A = \begin{bmatrix}
+1 & 0 \\ 
+1 & 3
+\end{bmatrix}; 
+Q = \begin{bmatrix}
+0 & 0.89443 \\
+1 & -0.44721
+\end{bmatrix}; 
+Q^{-1} = \begin{bmatrix}
+0.5 & 1 \\
+1.11803 & 0
+\end{bmatrix};
+\Lambda = \begin{bmatrix}
+3 & 0 \\
+0 & 1
+\end{bmatrix}
+$$
+
+$$
+Q\Lambda Q^{-1} = A
+$$
+
+A can be expressed as a diagonal matrix(simply stretch/squish of n-D orthogonal space) and its' eigenspace. 
+
+$$
+\Lambda = Q^{-1}AQ
+$$
+
+
