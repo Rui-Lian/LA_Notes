@@ -62,3 +62,24 @@ $$
 $$
 
 The above two vector live in a line. 
+
+## Adding vectors numerically and graphcally.
+
+Element-wise adding, for example.  
+
+$$
+\begin{bmatrix}
+6 \\
+2
+\end{bmatrix} +
+\begin{bmatrix}
+-4 \\
+4
+\end{bmatrix} = 
+\begin{bmatrix}
+2 \\
+2
+\end{bmatrix}
+$$
+
+Graphically: put one tail on the head of another vector. 

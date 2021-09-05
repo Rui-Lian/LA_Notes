@@ -1,2 +1,73 @@
 # Eigenvalues and Eigenvectors
 
+## Eigenvalues and Eigen vectors
+
+Matrix as a function of linear transformation. 
+$$
+A = 
+\begin{bmatrix}
+3 & 1 \\
+0 & 2
+\end{bmatrix}
+$$
+
+Notice vectors in x-axis will not be rotated by matrix $A$. Another direction unchanged by matrix a is: 
+
+$$
+\begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}
+$$
+
+**Eigenvectors**: vectors that are just stretched or squished in linear transformation without changing the direction, i.e., Eigenvectors are remained in its own span.  
+
+**Eigenvalues**: the factor by which the vector are stratched or squished. 
+
+Numerically: 
+$$
+A\vec{v} = \lambda\vec{v}
+$$
+
+Geometric interpretation: $\vec{v}$ transformed by matrix $A$ would be only stretched/squished, the direction of $\vec{v}$ remains unchanged. The stretch/squishing factor is $\lambda$. 
+
+## Matrice similarity
+
+Two n-by-n matrices A and B are called similar if there exists an invertible n-by-n matrix P such that 
+
+$$
+B = P^{-1}AP
+$$
+
+Example: 
+
+$$
+A = \begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix};
+P = \begin{bmatrix}
+2 & 1\\
+1 & -1
+\end{bmatrix};
+P^{-1} = 
+\begin{bmatrix}
+\frac{1}{3} &  \frac{1}{3} \\
+\frac{1}{3} & -\frac{2}{3}
+\end{bmatrix}
+$$
+B is similar matrix of A: 
+
+$$
+B = P^{-1}AP=
+\begin{bmatrix}
+\frac{1}{3} & \frac{2}{3} \\
+-\frac{5}{3} & -\frac{1}{3}
+\end{bmatrix}
+$$
+
+Comparison of the geometric outcome of a vector transformed by A and B. 
+
+A matrix and its similar matrix expressed by eigenvectors. 
+
+Meaning. 
