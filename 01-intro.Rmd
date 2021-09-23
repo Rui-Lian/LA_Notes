@@ -8,4 +8,5 @@ Two aspects of linear algebra are:
 
 2. Numerical computation. 
 
+
 It is the intuitive understanding, visualization (in 2D, or 3D) that matters most. 
